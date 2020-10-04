@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Web GIS Persebaran Objek Wisata Kabupaten Tegal</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/gambar.jpg" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#beranda">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#peta wisata">Peta Wisata</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wisata populer">Wisata Populer</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#kunjungi kami">Kunjungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To Web GIS Persebaran Objek Wisata Kabupaten Tegal!</div>
+                <div class="masthead-heading text-uppercase">Senang Bertemu Denganmu</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#beranda">Get Started</a>
+            </div>
+        </header>
+        <!-- Beranda-->
+        <section class="page-section" id="beranda">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Beranda</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-map fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Deskripsi Wilayah</h4>
+                        <p class="text-muted">Menyajikan informasi seputar wilayah kajian yaitu Kabupaten Tegal.</p>
+                        <a href="peta_admin/peta_admin.html" class="btn btn-primary">Jelajahi Peta</a>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-mountain fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Peta Wisata</h4>
+                        <p class="text-muted">Menyajikan informasi seputar peta persebaran objek wisata di Kabupaten Tegal.</p>
+                        <a href="wisata/wisata.html" class="btn btn-primary">Jelajahi Peta</a>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-hotel fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Tempat Penginapan</h4>
+                        <p class="text-muted">Menyajikan informasi seputar peta persebaran tempat penginapan di Kabupaten Tegal.</p>
+                        <a href="penginapan/penginapan.html" class="btn btn-primary">Jelajahi Peta</a>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-coffee fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Rumah Makan</h4>
+                        <p class="text-muted">Menyajikan informasi seputar peta persebaran rumah makan di Kabupaten Tegal.</p>
+                        <a href="rumah_makan/rumah_makan.html" class="btn btn-primary">Jelajahi Peta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- peta wisata-->
+        <section class="page-section bg-light" id="peta wisata">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Peta Wisata</h2>
+                    <h3 class="section-subheading text-muted">Menyajikan informasi persebaran objek wisata berdasarkan jenis wisatanya.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/cb.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Objek Wisata Waduk Cacaban</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Maritim</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/wkj2.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Wisata Kesehatan Jamu Kalibakung</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Kesehatan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/samedo.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Museum Situs Purbakala Semedo</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Budaya</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/amangkurat.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Makan Sunan Amangkurat Agung</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Ziarah</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/wgg.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Waterpark Gunung Gantungan</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Cagar Alam</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/guci1.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Objek Wisata Pemandian Air Panas Guci</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Buru</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/pangkah.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">PG Pangkah</div>
+                                <div class="portfolio-caption-subheading text-muted">Wisata Pertanian</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- wisata populer-->
+         <section class="page-section" id="wisata populer">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Wisata Populer</h2>
+                    <h3 class="section-subheading text-muted">Berikut merupakan 4 objek wisata populer di Kabupaten Tegal.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/guciku.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Objek Wisata Pemandian Air Panas Guci</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Objek Wisata Pemandian Air Panas Guci merupakan objek wisata yang terdapat di lereng Gunung Slamet atau tepatnya berlokasi di Desa Guci, Kecamatan Bumijawa, Kabupaten Tegal, Provinsi Jawa Tengah. Objek wisata ini menawarkan pesona keindahan alam pegunungan yang sejuk dan asri. Hal ini dapat dirasakan pengunjung sejak dalam perjalanan.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/purinn2.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Objek Wisata Purwahamba Indah</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Objek Wisata Purwahamba Indah (Pur’in) ini merupakan salah satu pantai yang terletak di Kabupaten Tegal. Objek wisata ini memiliki area yang cukup luas dan banyak pepohonan rindang yang mana cocok untuk berwisata dengan keluarga. Pantai Puwahamba indah ini memiliki lokasi yang sangat strategis yaitu berada di Jalan Pantai Utara (Pantura) Jawa Tengah, yang dapat membuat tempat wisata ini mudah untuk diakses dari mana saja.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/goor9.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">GOR Trisanja Slawi</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">GOR Trisanja merupakan salah satu stadion di Kabupaten Tegal yang terletak di Jalan Ir. H Juanda, Pakembaran, Kecamatan Slawi, Kabupaten Tegal, Jawa Tengah. Stadion ini dibangun pada akhir 1980an. Nama Tri Sanja ini diambil dari etos budaya masyarakat di Kabupaten Tegal yang mana memuat tiga landasan diantaranya orientasi masa depan yang lebih baik, peningkatan iman dan takwa serta percaya pada diri sendiri dan kemampuan sendiri. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/cb.jpg" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Objek Wisata Waduk Cacaban</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Objek Wisata Waduk Cacaban merupakan salah satu destinasi wisata di Kabupaten Tegal yang terletak di Desa Penujah, Kecamatan Kedungbanteng, Kabupaten Tegal, Jawa Tengah. Objek wisata ini memiliki daya tarik wisata tersendiri, dimana salah satu pesona keindahannya berupa perbukitan savana atau yang sering disebut dengan Bukit Teletubbies yang mengelilingi waduk tersebut. </p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- kunjungi kami-->
+        <section class="page-section bg-light" id="kunjungi kami">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Kunjungi Kami</h2>
+                    <h3 class="section-subheading text-muted">Untuk informasi lebih lanjut kunjungi akun media sosial kami.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/explore.png" alt="" />
+                            <h4>Explore Tegal</h4>
+                            <p></p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/dolan.jpg" alt="" />
+                            <h4>Dolan Tegal</h4>
+                            <p></p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/info.png" alt="" />
+                            <h4>Info Tegal</h4>
+                            <p></p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Aulia Putri Maulida | 2020</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">Penginderaan Jauh dan Sistem Informasi Geografi Universitas Gadjah Mada
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Objek Wisata Waduk Cacaban</h2>
+                                    <p class="item-intro text-muted">Wisata Maritim.</p>
+                                    <a href="wisata_maritim/wisata_maritim.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/cb.jpg" alt="" />
+                                    <p>Wisata maritim atau bahari merupakan jenis wisata yang berkaitan dengan kegiatan olahraga di air (danau, pantai teluk atau laut), seperti menyelam, berselancar, memancing, dan lain-lain. Kabupaten Tegal memiliki jenis wisata bahari, diantaranya Objek Wisata Purwahamba Indah dan Objek Wisata Waduk Cacaban.
+                                    <p>
+                                        1. Objek Wisata Waduk Cacaban merupakan salah satu destinasi wisata di Kabupaten Tegal yang terletak di Desa Penujah, Kecamatan Kedungbanteng, Kabupaten Tegal, Jawa Tengah. Objek wisata ini memiliki daya tarik wisata tersendiri, dimana salah satu pesona keindahannya berupa perbukitan savana atau yang sering disebut dengan Bukit Teletubbies yang mengelilingi waduk tersebut. Perairan di waduk cacaban ini begitu jernih yaitu berwarna hijau yang mana mencirikhaskan perairan danau serta langit biru sehingga membuat pemandangan di sekitar waduk menjadi mempesona.
+                                    </p>
+                                    <p>
+                                        2. Objek Wisata Purwahamba Indah (Pur’in) merupakan salah satu pantai yang terletak di Kabupaten Tegal. Objek wisata ini memiliki area yang cukup luas dan banyak pepohonan rindang yang mana cocok untuk berwisata dngan keluarga. Objek Wisata Puwahamba Indah ini memiliki lokasi yang sangat strategis yaitu berada di Jalan Pantai Utara (Pantura) Kabupaten Tegal, Jawa Tengah, yang dapat membuat tempat wisata ini mudah untuk diakses dari mana saja. Objek wisata ini menawarkan berbagai macam keindahan alam. Wisatawan dapat merasakan indahya laut Indonesia bagian utara Pulau Jawa dan juga dapat menikmati jajanan di sekitar pantai sambil berfoto-foto. Banyak fasilitas yang disediakan di objek wisata ini, diantaranya kebun binatang mini, waterboom dan lain-lain yang dapat membuat objek wisata ini banyak dikunjungi oleh wisatawan lokal maupun luar daerah untuk berlibur.
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Wisata Kesehatan Jamu Kalibakung</h2>
+                                    <p class="item-intro text-muted">Wisata Kesehatan.</p>
+                                    <a href="wisata_kesehatan/wisata_kesehatan.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/wkj2.jpg" alt="" />
+                                    <p>Wisata kesehatan merupakan salah satu jenis wisata yang banyak dilakukan oleh seorang wisatawan untuk kepentingan beristirahat atau dalam artian untuk menenangkan jasmani dan rohani agar tubuhnya kembali sehat seperti sebelumnya yaitu dapat dilakukan dengan mengunjungi tempat seperti objek wisata mata air panas yang mengandung mineral atau tempat yang memiliki iklim udara serta fasilitas yang mendukung untuk menyembuhkan dan menyehatkan jasmani dan rohaninya. Wisata Kesehatan yang ada di Kabupaten Tegal diantaranya, GOR Trisanja Slawi, Wisata Kesehatan Jamu Kalibakung dan Objek Wisata Pemandian Air Panas Guci. </p>
+                                    <p>
+                                        1. GOR Trisanja merupakan salah satu stadion di Kabupaten Tegal yang terletak di Jalan Ir. H Juanda, Pakembaran, Kecamatan Slawi, Kabupaten Tegal, Jawa Tengah. Stadion ini dibangun pada akhir 1980an. Nama Tri Sanja ini diambil dari etos budaya masyarakat di Kabupaten Tegal yang mana memuat tiga landasan diantaranya orientasi masa depan yang lebih baik, peningkatan iman dan takwa serta percaya pada diri sendiri dan kemampuan sendiri. Stadion ini memiliki kapasitas 10.000 orang. GOR Trisanja ini telah dilengkapi fasilitas yang lengkap, seperti kolam renang, kantin, lapangan dan lain-lain. Tidak hanya itu, suasana di seitar kawasan GOR yang asri karena banyak dikelilingi oleh pohon yang rindang. 
+                                    </p>
+                                    <p>
+                                        2. Kabupaten Tegal memiliki potensi wisata yang sangat besar. Hal ini dikarenakan keindahan dan kekayaan alamnya. Salah satunya program pariwisata yang telah ada di Kabupaten Tegal yaitu perwujudan pelayanan kesehatan dengan menggunakan jamu atau sering disebut Objek Wisata Kalibakung. Objek Wisata Jamu Kalibakung ini terletak di Desa Kalibakung, Kecamatan Balapulang, Kabupaten Tegal. Objek wisata ini memiliki lahan seluas 4 Ha yang terdiri dari berbagai tanaman jenis jamu. Pemandangan alam yang sangat indah berupa landscape perbukitan yang menyatu dengan sawah dan alirah sungai yang mengalir disisi bukit sangat cocok untuk menikmati jamu sambil memandang indahnya pemandangan yang ada di kawasan tersebut.  
+                                    </p>
+                                    <p>
+                                        3. Objek Wisata Pemandian Air Panas Guci merupakan objek wisata yang terdapat di lereng Gunung Slamet atau tepatnya berlokasi di Desa Guci, Kecamatan Bumijawa, Kabupaten Tegal, Provinsi Jawa Tengah. Objek wisata ini menawarkan pesona keindahan alam pegunungan yang sejuk dan asri. Hal ini dapat dirasakan pengunjung sejak dalam perjalanan. Pemandangan alam yang khas berupa hamparan sawah, kebun strawberry, tomat, wortel, cabai, hutan pinus serta ditambah udara sejuk yang menjadi ciri khas objek wisata di dataran tinggi. Salah satu pemandian yang harus dikunjungi adalah Pancuran 13 dimana di lokasi ini terdapat pancuran air panas yang berjumlah 13 buah dan dipercaya dapat menyembuhkan berbagai macam penyakit terutama penyakit kulit. Objek Wisata Pemandian Air Panas Guci telah dilengkapi fasilitas yang lengkap seperti tempat makan, mushola, tempat parkir, tempat penginapan bumi perkemahan, dan lain-lain.
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Museum Situs Purbakala Semedo</h2>
+                                    <p class="item-intro text-muted">Wisata Budaya.</p>
+                                    <a href="wisata_budaya/wisata_budaya.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/samedo.jpg" alt="" />
+                                    <p>Wisata budaya ini merupakan jenis wisata yang dilakukan dengan mengunjungi suatu tempat yang memiliki nilai kebudayaan, seni, adat istiadat atau kebiasaan masyarakat setempat. Kegiatan wisata ini memiliki tujuan untuk mengingat kembali suatu kebudayaan maupun gaya hidup masyarakat yang ada di wilayah tersebut. Wisata Budaya yang ada di Kabupaten Tegal diantaranya, Rumah Wayang Ki Enthus Susmono dan Museum Situs Purbakala Semedo.
+                                    </p>
+                                    <p>
+                                      1. Rumah Wayang Ki Enthus Susmono merupakan salah satu wisata budaya yang terletak di Desa Bengle, Kecamatan Talang, Kabupaten Tegal. Rumah Wayang ini memiliki luas sebesar 4 x 4 meter yag mana di dalamnya menyimpan ribuan wayang baik itu wayang gaya tradisi maupun kontemporer. Mulai dari wayang kulit, wayang golek, wayang santri, wayang bambu, wayang kreasi dan ada pula aksesoris jenis-jenis keris, topeng, batik tegalan, lukisan dunia perwayangan, senjata-senjata khas dunia perwayangan, foto-foto Ki Enthus, gamelan dan lain-lain. Tidak hanya itu di Rumah Wayang Ki Enthus Susmono ini, pengunjung juga dapat melihat proses pembuatan wayang baik itu wayang kulit maupun wayang golek. Proses pembuatan wayang ini dapat dilihat dengan pengunjung mulai dari proses bahan baku hingga diolah menjadi wayang siap untuk dimainkan.
+                                    </p>
+                                    <p>
+                                      2. Museum Situs Purbakala Semedo merupakan salah satu tempat wisata yang berada di Desa Semedo, Kecamatan Kedungbanteng, Kabupaten Tegal, Jawa Tengah. Museum Situs Purbakala Semedo ini merupakan tempat wisata bersejarah yang dulunya pada tahun 2005 ditemukannya fosil-fosil binatang vertebrata, fosil manusia purba homo erectus dan benda-benda purbakala oleh penduduk setempat. Museum ini memiliki pesona keindahan yang menarik untuk dikunjungi. Karena dapat memberikan gambaran mengenai evolusi fauna dan lingkungan purba pada Kala Plestosen, khususnya di Kabupaten Tegal. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Makam Sunan Amangkurat Agung</h2>
+                                    <p class="item-intro text-muted">Wisata Ziarah.</p>
+                                    <a href="wisata_ziarah/wisata_ziarah.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/amangkurat.jpg" alt="" />
+                                    <p>Wisata ziarah merupakan salah satu jenis wisata yang berkaitan dengan agama, kepercayaan, adat istiadat dan kepercayaan umat atau kelompok dalam masyarakat dimana wisata ziarah ini biasanya dilakukan seseorang atau rombongan kelompok ke tempat-tempat suci, ke makam-makam orang besar atau pemimpin yang diagungkan dan lain-lain. Wisata ziarah ini banyak dihubungkan dengan niat wisatawan untuk memperoleh restu, kekuatan batin dan lain-lain serta untuk tujuan diberi kekayaan melimpah. Kabupaten Tegal memiliki berbagai jenis wisata, salah satunya wisata ziarah. Wisata Ziarah yang ada di Kabupaten Tegal diantaranya Makam Sunan Amangkurat Agung, Makam Pangeran Purbaya dan Makam Ki Ageng Anggawana. </p>
+                                    <p>
+                                        1. Makam Sunan Amangkurat Agung merupakan salah satu wisata religi yang ada di Kabupaten tegal yakni terletak di Dusun Pakuncen, Desa Pesarean, Kecamatan Adiwerna. Komplek Makan Tegal Arum ini merupakan makam Sunan Amangkurat I atau Sri Susuhunan Amangkurat Agung yang merupakan raja Kesultanan Mataram yang memerintah tahun 1646-1677. Sunan Amangkurat I ini memiliki 2 orang permaisuri yakni putri Pangeran Pekik dari Surabaya yang menjadi Ratu Kulon dan putri keluarga Kajoran yang menjadi Ratu Wetan. Sunan Amangkurat I ini meninggal pada tanggal 13 Juli 1677 di Desa Wanayasa, Banyumas dan berwasiat agar dimakamkan dekat gurunya di Tegal Arum. 
+                                    </p>
+                                    <p>
+                                        2. Tak hanya wisata alam saja, Kabupaten Tegal juga memiliki berbagai macam wisata religi/ziarah, salah satunya yaitu Makam Pangeran Purbaya. Makam Pangeran Purbaya terletak di Desa Kalisoka, Kecamatan Dukuhwaru, Kabupaten Tegal. Pangeran Purbaya atau Sayyid Abdul Ghofar ini merupakan menantu dari Ki Gede Sebayu yang merupakan pendiri Kabupaten Tegal. Komplek pemakaman ini terbagi menjadi beberapa area, diantaranya area terluar yang merupakan pemakaman umum warga sekitar dan area dalam yang merupakan pemakanan keturunan Pangeran Purbaya atau Ki Gede Sebayu. 
+                                    </p>
+                                    <p>
+                                        3. Ki Ageng Anggawana merupakan anak dari Ki Gede Sebayu yang merupakan pendiri Kabupaten Tegal. Makam Ki Ageng Anggawana terletak di Desa Kalisoka, Kecamatan Dukuhwaru, Kabupaten Tegal. Suasana di sekitar kawasan tersebut masih terbilang sejuk dan asri. Posisi Makam Ki Ageng Anggawana ini berada di belakang Masjid Kasepuhan Ki Ageng Anggawana yang dikelilingi dengan pagar batu bata dalam keadaan tertutup dengan beratapkan genting. Di lokasi tersebut juga terdapat pula makam warga sekitar. Banyak orang yang berziarah ke makam tersebut. untuk melakukan ziarah ke makam tersebut pengunjung harus meminta izin terlebih dahulu kepada juru kunci makam, mengingat pada hari-hari baiasa bangunan tersebut dikunci rapat. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Waterpark Gunung Gantungan</h2>
+                                    <p class="item-intro text-muted">Wisata Cagar Alam.</p>
+                                    <a href="wisata_cagar_alam/wisata_cagar_alam.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/wgg.jpg" alt="" />
+                                    <p>Wisata cagar alam merupakan jenis wisata yang banyak dilakukan untuk mengunjungi tempat atau daerah cagar alam, taman lindung, hutan di daerah pegunungan dan sebagainya, dimana kawasan tersebut merupakan suatu kawasan yang kelestariannya dilindungi oleh pemerintah dan undang-undang. Wisata cagar alam ini biasanya banyak disukai oleh penggemar dan pecinta alam dalam menikmati keindahan alam yang ada di wilayah tersebut.  </p>
+                                    <p>
+                                        1. Sindang Kemadu merupakan salah satu objek wisata yang terletak di Desa Muncanglarang, Kecamatan Bumijawa, Kabupaten Tegal. Tempat wisata ini merupakan destinasi wisata baru yang cukup potensial karena memiliki panorama yang cukup indah dan menarik yaitu berupa pepohonan pinus dan pegunungan serta memiliki udara yang sejuk. Hal ini dikarenakan objek wisata Sindang Kemadu ini berlokasi di dataran tinggi sehingga tempat wisata ini memiliki udara yang sejuk. Selain itu, objek wisata ini menawarkan berbagai wahana yang menarik hingga menantang, sehingga objek wisata ini banyak diminati oleh pengunjung. 
+                                    </p>
+                                    <p>
+                                        2. Objek wisata yang sedang populer sekarang ini yaitu Bukit Bulak Cempaka. Bukit Bulak Cempaka merupakan sebuah perbukitan yang terletak di Desa Cempaka, Kecamatan Bumijawa, Kabupaten Tegal. Bukit Bulak Cempaka ini menyimpan berbagai keindahan alam yang mempesona, salah satunya dengan tersedianya spot foto yang cukup instagramable salah satunya yaitu gardu pandang seperti perahu, rumah pohon, sayap kupu-kupu dan lain sebagainya. Untuk menuju ke objek wisata tersebut, pengunjung banyak disuguhkan keindahan alam diantaranya Golden Sunrise di pagi hari seperti di Sikuning Dieng pada saat sunset, serta panorama senja yang dapat membuat pikiran menjadi tenang.   
+                                    </p>
+                                    <p>
+                                        3. Tuk Mudal merupakan salah satu destinasi wisata yang terletak di Desa Cempaka, Kecamatan Bumijawa, Kabupaten Tegal. Sebelum menjadi destinasi wisata, Tuk Mudal ini dulunya menupakan menjadi sumber pengairan untuk persawahan warga di sekitar telaga, namun sekarang masyarakan telah mengelolanya untuk tujuan wisata. Tuk Mudal ini menjadi salah satu tempat yang nyaman untuk berwisata, karena memiliki udara yang segar dan air Tuk yang jernih. Selain itu, di sekitar kawasan tersebut juga terdapat banyak pepohonan yang rindang. Hal ini tentu dapat menambah suasana di kawasan tersebut menjadi asri.
+                                    </p>
+                                    <p>
+                                        4. Telaga Kaliwangon merupakan salah satu telaga yang memiliki panorama alam yang indah, asri, bersih dan sejuk yang terletak di Desa Muncanglarang, Kecamatan Bumijawa, Kabupaten Tegal. Telaga ini memiliki spot underwater yang cocok untuk pengunjung yang hobby bermain air. Telaga Kaliwangon ini memiliki sumber mata air yang berasal dari bawah tanah sehingga memiliki arus yang tenang dan tergolong masih bersih. Untuk mencapai ke lokasi tersebut, pengunjung banyak disuguhkan pemandangan yang begitu indah yakni berupa hutan dan hamparan sawah yang menghijau serta udara di kawasan tersebut yang sejuk.
+                                    </p>
+                                    <p>
+                                        5. Curug Cantel adalah salah satu curug yang ada di Kabupaten Tegal yang terletak di Jalan Raya Kalipedes, Desa Sigedong, Kecamatan Bumijawa, Kabupaten Tegal. Curug ini memiliki keindahan panorama alam yang sangat menarik. Curug Cantel memiliki tinggi sebesar 60 meter. Untuk mencapai ke lokasi pengunjung dapat menikmati berbagai pemandangan seperti perkebunan, persawahan, menyebrangi sungai kecil dan lain-lain. Hal ini tentunya dapat menambah keistimewaan curug tersebut, ditambah dengan landscape bebatuan yang ada di dasar curug juga dapat menciptakan pemandangan yang semakin eksotis. 
+                                    </p>
+                                    <p>
+                                        6. Taman Oemah Pinus merupakan salah satu destinasi wisata yang menyuguhkan keindahan alam berupa hutan pinus yang sangat rimbun. Objek wisata ini banyak diminati oleh wisatawan karena memiliki suasana yang nyaman serta memiliki spot foto yang berbagai ragam. Taman Oemah Pinus terletak di Desa Sigendong, Kecamatan Bumijawa, Kabupaten Tegal. Objek wisata ini sangat cocok dijadikan sebagai salah satu destinasi wisata karena memiliki panorama alam yang indah. Tak hanya itu, fasilitas yang tersedia di objek wisata ini juga terbilang cuckup lengkap, sehingga sangat cocok dijadikan sebagai agenda berwisata dengan keluarga, kerabat maupun saudara. 
+                                    </p>
+                                    <p>
+                                        7. Objek Wisata Pemandian Air Panas Guci merupakan objek wisata yang terdapat di lereng Gunung Slamet atau tepatnya berlokasi di Desa Guci, Kecamatan Bumijawa, Kabupaten Tegal, Provinsi Jawa Tengah. Objek wisata ini menawarkan pesona keindahan alam pegunungan yang sejuk dan asri. Hal ini dapat dirasakan pengunjung sejak dalam perjalanan. Pemandangan alam yang khas berupa hamparan sawah, kebun strawberry, tomat, wortel, cabai, hutan pinus serta ditambah udara sejuk yang menjadi ciri khas objek wisata di dataran tinggi. Salah satu pemandian yang harus dikunjungi adalah Pancuran 13 dimana di lokasi ini terdapat pancuran air panas yang berjumlah 13 buah dan dipercaya dapat menyembuhkan berbagai macam penyakit terutama penyakit kulit. Objek Wisata Pemandian Air Panas Guci telah dilengkapi fasilitas yang lengkap seperti tempat makan, mushola, tempat parkir, tempat penginapan bumi perkemahan, dan lain-lain.
+                                    </p>
+                                    <p>
+                                        8. Kabupaten Tegal memiliki berbagai macam objek wisata, salah satunya yaitu Wisata Taman Anggrek. Wisata Taman Anggrek ini merupakan salah satu wisata baru yang terletak di Desa Tuwel, Kecamatan Bojong, Kabupaten Tegal. Taman bunga ini berada di bawah kaki Gunung Slamet, sehingga menghadirkan udara yang khas pegunungan yang sejuk dan asri. Wisata taman anggrek ini memiliki berbagai jenis bunga anggrek dari bunga anggrek lokal maupun anggrek bibit impor dari Taiwan dan negara lainnya. Jenis bunga yang ada di taman tersebut bermacam-macam seperti bunga lily, bunga gerbera/herbras, bunga soka, anggrek tebu, bunga petunia dan lain-lain. Tidak hanya itu, di tempat wisata ini juga terdapat spot foto kekinian yang banyak digemari oleh pecinta foto. 
+                                    </p>
+                                    <p>
+                                        9. Wana Wisata Praban Lintang terletak di Jalan Raya Danasari, Kecamatan Bojong, Kabupaten Tegal, Jawa Tengah. Objek wisata ini merupakan salah satu objek wisata baru, akan tetapi sudah cukup populer untuk masyarakat setempat dan banyak pengunjung yang datang unttuk sekedar menikmati keindahan alamnya juga untuk berselfie. Ada berbagai macam spot foto yang unik dan kekinian/ instagramable sehingga pengunjung dapat menikmati objek wisata tersebut. Wana Wisata Praban Lintang ini berada di kawasan hutan pinus yang cukup rindang dan masih asri dan sejuk. 
+                                    </p>
+                                    <p>
+                                        10. Clirit View merupakan salah satu objek wisata yang yang terletak di Desa Kalibakung, Kecamatan Balapulang, Kabupaten Tegal. Tempat wisata ini memiliki pemandangan alam berupa hutan pinus yang asri, sehingga udara dan suasana di kawasan objek wisata ini sangat sejuk. Hal ini tentu dapat membuat pengunjung berlama-lama dan menjadi daya tarik tersendiri di dalam menikmati objek wisata tersebut. Clirit view memiliki berbagai macam spot foto yang unik dan instagramable, sehingga sangat cocok untuk pengunjung yang gema dengan wisata alam dan berburu spot foto cantik. Tak hanya itu, fasilitas yang ada di wisata Clirit View juga tak perlu diragukan lagi, karena kenyamanan pengunjung sudah menjadi prioritas dari objek wisata tersebut. 
+                                    </p>
+                                    <p>
+                                        11. Waterpark Gunung Gantungan Jatinegara merupakan salah satu wisata baru untuk yang terletak di Desa Gantungan, Kecamatan Jatinegara, Kabupaten Tegal yang menawarkan permainan air. Tempat wisata ini memiliki berbagai fasilitas dan wahana yang dapat dinikmati oleh pengunjung. Tidak hanya itu, tempat wisata ini juga bisa dijadikan tempat selfie karena di dalamnya menyediakan berbagai spot foto salah satunya yaitu taman yang dapat memanjakan mata ditambah background Desa Jatinegara yang bisa dilihat dari atas serta hamparan Gunung Slamet yang menjulang sisi selatan yang dapat membuat panorama di kawasan tersebut menjadi asri dan sejuk.
+                                    </p>
+                                    <p>
+                                        12. Wisata Alam Bukit Gumantung merupakan salah satu objek wisata yang menyuguhkan panorama alam yang masih terjaga kealamiannya. Objek wisata ini terletak di Desa Gantungan, Kecamatan Jatinegara, Kabupaten Tegal. Objek wisata ini memiliki keunikan pada malam hari, dimana dari atas Bukit Gumantung pengunjung dapat melihat pemandangan wilayah pantura, pemandangan Gunung Gajah dan melihat Jalan Tol Trans Jawa yang terlihat gemerlip lampu kota yang indah dan mempesona seperti halnya berada di Bukit Bintang Jogja. 
+                                    </p>
+                                    <p>
+                                        13. Banyak wisata yang cukup menarik untuk dikunjungi dengan pemandangan alam yang indah di Kabupaten Tegal salah satunya yaitu Wrayan View. Wrayan View in terletak di Desa Lebakwangi, Kecamatan Jatinegara Kabupaten Tegal. Pemandangan di lokasi wisata ini sangat alami dengan hamparan perkebunan dan perbukitan yang ada ditambah waduk cacaban yang dapat dilihat dari atas tempat wisata ini juga menambah keindahan panorama wisata tersebut. Tidak hanya itu, tempat wisata ini juga menwarkan berbagai fasilitas dan spot selfie dapat menarik minat pengunjung untuk berwisata ke tempat tersebut.
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Objek Wisata Pemandian Air Panas Guci</h2>
+                                    <p class="item-intro text-muted">Wisata Buru.</p>
+                                    <a href="wisata_buru/wisata_buru.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/guci1.jpg" alt="" />
+                                    <p>Wisata buru merupakan jenis wisata yang dilakukan dengan mengunjungi suatu tempat yang telah dipersiapkan oleh pemerintah untuk dijadikan sebagai kawasan berburu. Salah satu destinasi wisata di Kabupaten Tegal yang dijadikan sebagai kawasan berburu yaitu berada di Objek Wisata Pemandian Air Panas Guci.
+                                    </p>
+                                    <p>
+                                        Objek Wisata Pemandian Air Panas Guci merupakan objek wisata yang terdapat di lereng Gunung Slamet atau tepatnya berlokasi di Desa Guci, Kecamatan Bumijawa, Kabupaten Tegal, Provinsi Jawa Tengah. Objek wisata ini menawarkan pesona keindahan alam pegunungan yang sejuk dan asri. Hal ini dapat dirasakan pengunjung sejak dalam perjalanan. Pemandangan alam yang khas berupa hamparan sawah, kebun strawberry, tomat, wortel, cabai, hutan pinus serta ditambah udara sejuk yang menjadi ciri khas objek wisata di dataran tinggi. Salah satu pemandian yang harus dikunjungi adalah Pancuran 13 dimana di lokasi ini terdapat pancuran air panas yang berjumlah 13 buah dan dipercaya dapat menyembuhkan berbagai macam penyakit terutama penyakit kulit. Objek Wisata Pemandian Air Panas Guci telah dilengkapi fasilitas yang lengkap seperti tempat makan, mushola, tempat parkir, tempat penginapan bumi perkemahan, dan lain-lain. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 7-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">PG Pangkah</h2>
+                                    <p class="item-intro text-muted">Wisata Pertanian.</p>
+                                    <a href="wisata_pertanian/wisata_pertanian.html" class="btn btn-primary">Jelajahi Peta</a>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pangkah.jpg" alt="" />
+                                    <p>Wisata pertanian merupakan jenis wisata yang banyak dilakukan untuk mengunjungi tempat seperti proyek-proyek pertanian, perkebunan, ladang dan sebagainya. Kegiatan mengunjungi tempat-tempat tersebut biasanya dimaksudkan untuk melakukan kunjungan, peninjauan untuk tujuan studi atau melihat-lihat keindahan dan suburnya tanaman yang ada di wilayah tersebut. Salah satu wisata pertanian di Kabupaten Tegal yaitu PG Pangkah. 
+                                    </p>
+                                    <p>
+                                        1. Pabrik Gula (PG) Pangkah berdiri sejak tahun 1832. PG Pangkah ini selain masih beroperasi, juga menjadi salah satu destinasi agrowisata di Kabupaten Tegal. Berlokasi di Desa Pangkah, Kecamatan Pangkah, Kabupaten Tegal, PG Pangkah ini dikenal dengan pabrik gula besar di wilayah Slawi, Jawa Tengah. Objek wisata ini merupakan salah satu wisata yang cukup menarik, karena di dalamnya menawarkan berbagai fasilitas, salah satunya yaitu loko antik. Dengan menggunakan loko antik, pengunjung dapat menikmati pemandangan perkebungan tebu dengan jarak kurang lebih 10 km. PG Pangkah ini merupakan salah satu tempat untuk berwisata sekaligus belajar yang menyenangkan mengenai pengolahan tebu mulai dari produksi tebu sampai mnjadi gula. Hal ini tentunya dapat menjadi pengalaman berwisata yang menyenangkan dan berbeda dibandingkan destinasi wisata yang lain. 
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

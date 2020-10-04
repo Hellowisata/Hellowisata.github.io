@@ -1,0 +1,9 @@
+var json_WisataMaritim_4 = {
+"type": "FeatureCollection",
+"name": "WisataMaritim_4",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nama_Wisat": "Objek Wisata Waduk Cacaban", "Lokasi": "Desa Penujah, Kecamatan Kedungbanteng, Kabupaten Tegal, Jawa Tengah", "Tiket_Masu": "Tiket masuk hari biasa (Senin-Jumat) Rp. 3.500 & Tiket masuk hari libur (Sabtu-Minggu) Rp. 4.500", "Tarif_Park": "Tarif Parkir Motor Rp. 3.000 & Tarif Parkir Mobil Rp. 10.000", "Jam_Operas": "Jam Operasional Pukul 07.00-18.00 WIB", "Fasilitas": "Bumi perkemahan, tempat bermain anak, kapal wisata, warung apung, hotel melati, rumah makan, panggung hiburan, musholla, toilet umum, Bukit Mbah Santi", "Foto": "E:\\WebGIS Pariwisata\\img\\cacaban.jpg", "Sumber": "@hasanudin.94" }, "geometry": { "type": "Point", "coordinates": [ 109.183312982044043, -7.006167078761399 ] } },
+{ "type": "Feature", "properties": { "Nama_Wisat": "Objek Wisata Purwahamba Indah", "Lokasi": "Jalan Pantai Utara (Pantura) Kabupaten Tegal, Jawa Tengah", "Tiket_Masu": "Tiket masuk hari biasa (Senin-Jumat) Dewasa Rp. 3.000 & Anak-anak Rp. 2.500. Sedangkan tiket masuk hari libur (Sabtu-Minggu) Dewasa Rp. 3.500 & Anak-anak Rp. 3.000. Apabila pengunjung rombongan maka akan diperoleh diskon yaitu sebesar : Untuk 25-50 orang", "Tarif_Park": "Tarif Parkir Motor Rp. 2.000 & Tarif Parkir Mobil Rp. 5.000", "Jam_Operas": "Jam Operasional Pukul 09.00-17.00 WIB", "Fasilitas": "Kolam renang internasional, waterboom, sepeda air, kereta mini, kebun binatang mini, taman ria, pesawat terbang (film dokumenter), dermaga, gazebo, shelter, ruang pertemuan, toilet, cafe, kantin, musholla dan lain-lain.", "Foto": "E:\\WebGIS Pariwisata\\img\\purin.jpg", "Sumber": "@alivikry" }, "geometry": { "type": "Point", "coordinates": [ 109.241498844965903, -6.870862389680242 ] } }
+]
+}
